@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+# search script
+# 1) Create a search script
+# 2) prompt for file name
+# 3) get rid of errors
+# 4) display results on screen
+
+echo " Search script is starting"
+echo ""
+
+# get user input for file name
+read -p "What is the file name you want to search for: " FILENAME
+
+# search for file
+find / -name $FILENAME 2> /dev/null | LOCATION
+
+# check if successfull
+if [ $? -eq "0" ]
+then
+	# display results
+	echo "File found in $LOCATION"
+else
+	# error message
+	echo "Could not find file :("
+fi
+# finish
+echo ""
+echo "Search script is complete"

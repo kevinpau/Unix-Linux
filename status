@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+# This script was created by KP on 6/6/19.
+# This script does...
+clear
+echo "status is running..."
+echo ""
+echo "There are `ps -e|wc -l` processes running." 
+echo ""
+sleep 120
+echo "There are `who|wc -l` users on the server."
+echo ""
+echo "status finished running! Goodbye."

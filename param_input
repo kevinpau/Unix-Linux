@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+# accept an input parameter
+echo $0
+PAT=^[a-z]{7}
+if [ $1=~$PAT ]
+then
+	file=''
+else
+	file=$1	
+fi
+echo $file
+
+find ~ -name $file 2> /dev/null

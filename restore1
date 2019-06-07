@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+#restore file from ~/recycle
+
+if [ $# -ne 1 ]; then
+   echo "Usage: $0 f1 - missing an arguement"
+   echo " script complete"   
+   exit
+fi
+
+#read -p "What file do you want to restore: " fname
+[ -f ~/recycle/$1 ]
+
+stat=$?
+
+if [ $stat -eq "0" ];
+then
+   mv -i ~/recycle/$1 .
+   echo ""
+   echo "file '$1' restored to: `pwd` ";
+else
+   echo "file '$1'  does not exist"
+fi
+
+echo ""
+echo "script complete"

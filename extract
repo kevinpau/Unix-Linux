@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+# This script was created by KP on 6/6/19.
+# This script does...
+clear
+echo "Creating report..."
+cat ~/funds/bigfile ~/funds/redshirt2 > ~/export_report
+echo ""
+echo "There are `cat ~/export_report|wc -l` lines in the report." 
+echo "There are `cat ~/export_report|wc -w` words in the report." 
+echo ""
+echo "export_report was created in ~"
+something
+if [ $? -eq "0" ]
+then 
+	echo "great"
+else
+	#echo "bad"
+	exit
+fi
